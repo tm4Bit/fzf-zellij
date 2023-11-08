@@ -96,7 +96,7 @@ else
     cd $path
     
     if [ $path ]; then
-      zellij action new-tab -n $2 -l ~/.config/zellij/fzj_tab.kdl -c $path
+      zellij action new-tab -n $2 -l ~/.local/share/zap/plugins/fzf-zellij/fzj_tab.kdl -c $path
     else
       echo "󰂭  No path selected!"
     fi
