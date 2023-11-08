@@ -1,12 +1,16 @@
-# Fzfij
+# fzf-zellij
 
-Zellij tool to create sessions, tabs, panes and edit a specific file using fzf command line tool.
+A plugin to give extra powers to zellij using fzf.
 
-## --help
+## Help
 
-fzj [option] <value>
+- fzf directories to attach to a session with a given name
+- find a file in the current directiory to edit in a new pane
+- fzf sessions to attach (no more: zellij ls, then zellij a <name of the session>)
+- fzf directories to open a new tab with a given name
 
-options: 
-    -t:     create a new tab on zellij with a given name
-    -s:     create a new session on zellij with a given name
-    -f:     open a pane with there's a zellij session, if not create a session to edit a file
+For more information run: 
+```sh
+fzj --help
+```
+
