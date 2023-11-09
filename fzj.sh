@@ -16,7 +16,6 @@ EXCLUDE_FILES=(
 DEPENDENCIES=(
   fzf
   zellij
-  lolcat
 )
 
 for dep in "${DEPENDENCIES[@]}"; do
@@ -70,7 +69,7 @@ if [ $# == 0 ]; then
     # first I remove the `[32;1m`
     # Then I grab the first field using the space delimeter
     # Then I use sed to remove `[m`
-    session=$(zellij ls | cut -c 8- | cut -d " " -f1 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | fzf --prompt="󱊄 Select a session: " --height=20% --color --pointer=" " --min-height=5 --layout=reverse --border)
+    session=$(zellij ls | cut -c 8- | cut -d " " -f1 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | fzf --prompt="󱊄 Select a session: " --height=20% --pointer=" " --min-height=5 --layout=reverse --border)
     if [[ $session ]]; then
       zellij a $session
     else
