@@ -30,10 +30,11 @@ if [[ $1 == "--help" ]]; then
 
   USAGE:
     fzj -> open a zellij session with default name or list all section for selection 
-    fzj [option] [valeu]
+    fzj [option] [value]
 
   OPTIONS:
     -t    create new tab in zellij with the given name[value]
+    -d    delete a selected session
     -s    create new session with a given name[value]
     -f    create a edit pane to the selected file
 
