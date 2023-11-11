@@ -85,6 +85,13 @@ elif [ $# == 1 ]; then
     else
       echo "󰂭  No file selected!"
     fi
+  elif [ $1 == "-d" ]; then
+    session=$(zellij ls | cut -c 8- | cut -d " " -f1 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | fzf --prompt="󱊄 Select a session: " --height=20% --pointer=" " --min-height=5 --layout=reverse --border)
+    if [[ $session ]]; then
+      zellij d $session
+    else
+      echo "󰂭  No session selected!"
+    fi
   else
     echo "󰂭  invalid command: fzj $1 [value]"
   fi
